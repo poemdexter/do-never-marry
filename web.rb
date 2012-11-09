@@ -35,3 +35,7 @@ get '/delete/:id' do
   @reason.delete
   redirect '/admin'
 end
+
+get '/getrandom' do
+  Reason.random.text
+end

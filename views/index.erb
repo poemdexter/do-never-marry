@@ -15,10 +15,10 @@
     <div class="span10 offset1 bot_border">
         <div class="legend-overlap">Because...</div>
         <div class="center_items">
-            <p><%= @random_reason.text %></p>
+            <p id="the_reason"><%= @random_reason.text %></p>
         </div>
         <div class="center_items">
-            <button type="submit" class="btn">I need another...</button>
+            <button class="btn" id="randomButton">I need another...</button>
         </div>
         <div class="spacer"></div>
     </div>
@@ -42,7 +42,21 @@
     </div>
     </div>
 </div>
-</footer>
-</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+    $(document).ready("#randomButton").click(function() {
+        $("#the_reason").animate({opacity:0});
+        $.get("/getrandom",
+            function(data) {
+                $("#the_reason")
+                .text(data)
+                .animate({opacity:1});
+            }
+        );
+    });
+
+    
+</script>
 </body>
 </html>
