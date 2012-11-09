@@ -5,6 +5,13 @@ class Reason < ActiveRecord::Base
 
     def self.random(options = {})
         count = self.count()
-        self.find(:first, options.merge(:offset => rand(count)))
+        result = self.find(:first, options.merge(:offset => rand(count)))
+        if result.nil?
+            reason = Reason.new
+            reason.text = ""
+            return reason
+        else
+            reason
+        end
     end
 end
