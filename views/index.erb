@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Do Never Marry</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>DO NEVER MARRY</h1>
+    </div>
+
+    <div class="row">
+    <div class="span10 offset1 bot_border">
+        <div class="legend-overlap">Because...</div>
+        <div class="center_items">
+            <p><%= @random_reason.text %></p>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="span10 offset1 bot_border">
+        <form class="form-horizontal" method="post" action="/">
+            <div class="legend-overlap">Help a bro out:</div>
+            <div class="center_items">
+                <input type="text" class="reason_entry" name="text" placeholder="Do never marry because...">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="span10 offset1 footer">
+        © 2012 <a href="http://twitter.com/poemdexter">@poemdexter</a>
+    </div>
+    </div>
+</div>
+</footer>
+</div>
+</body>
+</html>

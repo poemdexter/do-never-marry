@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Do Never Marry</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul>
+          <% for @reason in @reasons %>
+            <li><a href="/delete/<%= @reason.id %>">delete</a> || <%= @reason.text %></li>
+          <% end %>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
