@@ -19,8 +19,8 @@
         <div class="center_items">
             <p id="the_reason"><%= @random_reason.text %></p>
         </div>
-        <div class="center_items">
-            <button class="btn" id="randomButton">I need another...</button>
+        <div class="center_items" id="randomButton">
+            <button class="btn">I need another...</button>
         </div>
         <div class="spacer"></div>
     </div>
@@ -50,15 +50,17 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
-    $(document).ready("#randomButton").click(function() {
-        $("#the_reason").animate({opacity:0}, function() {
-            $.get("/getrandom",
-                function(data) {
-                    $("#the_reason")
-                    .text(data)
-                    .animate({opacity:1});
-                }
-            );
+    $(document).ready(function() {
+        $("div#randomButton").click(function() {
+            $("#the_reason").animate({opacity:0}, function() {
+                $.get("/getrandom",
+                    function(data) {
+                        $("#the_reason")
+                        .text(data)
+                        .animate({opacity:1});
+                    }
+                );
+            });
         });
     });
 </script>
