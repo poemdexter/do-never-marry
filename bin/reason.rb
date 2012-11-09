@@ -7,11 +7,15 @@ class Reason < ActiveRecord::Base
         count = self.count()
         result = self.find(:first, options.merge(:offset => rand(count)))
         if result.nil?
-            reason = Reason.new
-            reason.text = ""
-            return reason
+            dummy() 
         else
             result
         end
     end
+
+    def dummy() {
+        reason = Reason.new
+        reason.text = "It's a bad idea."
+        return reason
+    }
 end
