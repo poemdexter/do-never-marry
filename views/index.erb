@@ -3,19 +3,20 @@
 <head>
     <title>Do Never Marry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap-responsive.css" type="text/css" />
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
 </head>
 <body>
-<div class="container">
     <div class="page-header">
         <h1>DON'T EVER MARRY</h1>
     </div>
 
-    <div class="row">
-    <div class="span10 offset1 bot_border">
-        <div class="legend-overlap">Because...</div>
+    <div class="row-fluid">
+    <div class="span8 offset2 bot_border">
+        <div class="center_items">
+            <div class="legend-overlap">Because...</div>
+        </div>
         <div class="center_items">
             <p id="the_reason"><%= @random_reason.text %></p>
         </div>
@@ -26,24 +27,27 @@
     </div>
     </div>
 
-    <div class="row">
-    <div class="span10 offset1 bot_border">
+    <div class="row-fluid">
+    <div class="span8 offset2 bot_border">
         <form class="form-horizontal" method="post" action="/">
-            <div class="legend-overlap">Help a bro out:</div>
+            <div class="center_items">
+                <div class="legend-overlap">Help a bro out:</div>
+            </div>
             <div class="center_items">
                 <input type="text" class="reason_entry" name="text" placeholder="Do never marry because...">
+            </div>
+            <div class="center_items sm-pad-top">
                 <button type="submit" class="btn">Submit</button>
             </div>
         </form>
     </div>
     </div>
 
-    <div class="row">
-    <div class="span10 offset1 footer">
+    <div class="row-fluid">
+    <div class="span8 offset2 footer">
         © 2012 <a href="http://twitter.com/poemdexter">@poemdexter</a>
     </div>
     </div>
-</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
