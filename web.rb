@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './bin/reason'
+require 'uri'
 
 configure :development, :test do
   set :database, 'sqlite3:///dnm.db'
