@@ -11,7 +11,7 @@ class Reason < ActiveRecord::Base
             reason.text = ""
             return reason
         else
-            reason
+            result
         end
     end
 end
